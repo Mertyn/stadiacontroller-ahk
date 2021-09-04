@@ -1,7 +1,17 @@
+; Print some test outputs to the console
+
 Assistant() {
-    MsgBox "Assistant pressed"
+    FileAppend "Assistant Down`n", "*"
+}
+
+AssistantUp() {
+    FileAppend "Assistant Up`n", "*"
 }
 
 Capture() {
-    MsgBox "Capture pressed"
+    FileAppend "Capture Down`n", "*"
+}
+
+CaptureUp() {
+    FileAppend "Capture Up`n", "*"
 }

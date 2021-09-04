@@ -73,6 +73,8 @@ func run() error {
 
 			if assistantPressed {
 				stadiacontroller.CallAHKFunction("Assistant")
+			} else {
+				stadiacontroller.CallAHKFunction("AssistantUp")
 			}
 		}
 
@@ -81,6 +83,8 @@ func run() error {
 
 			if capturePressed {
 				stadiacontroller.CallAHKFunction("Capture")
+			} else {
+				stadiacontroller.CallAHKFunction("CaptureUp")
 			}
 		}
 	}
