@@ -59,6 +59,8 @@ func run() error {
 
 	assistantPressed, capturePressed := false, false
 
+	stadiacontroller.InitAHK()
+
 	for {
 		report, err := controller.GetReport()
 
@@ -79,17 +81,25 @@ func run() error {
 		if report.Assistant != assistantPressed {
 			assistantPressed = report.Assistant
 
-			if err := runButtonPress(assistantPressed, *onAssistantPressed, *onAssistantReleased); err != nil {
-				return err
+			if assistantPressed {
+				stadiacontroller.CallAHKFunction("Assistant")
 			}
+
+			// if err := runButtonPress(assistantPressed, *onAssistantPressed, *onAssistantReleased); err != nil {
+			// 	return err
+			// }
 		}
 
 		if report.Capture != capturePressed {
 			capturePressed = report.Capture
 
-			if err := runButtonPress(capturePressed, *onCapturePressed, *onCaptureReleased); err != nil {
-				return err
+			if capturePressed {
+				stadiacontroller.CallAHKFunction("Capture")
 			}
+
+			// if err := runButtonPress(capturePressed, *onCapturePressed, *onCaptureReleased); err != nil {
+			// 	return err
+			// }
 		}
 	}
 }
