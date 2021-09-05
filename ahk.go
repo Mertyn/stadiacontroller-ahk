@@ -15,6 +15,8 @@ var (
 
 	addFile     = ahk.NewProc("addFile")
 	ahkFunction = ahk.NewProc("ahkFunction")
+
+	ahkTerminate = ahk.NewProc("ahkTerminate")
 )
 
 func InitAHK() {
@@ -31,4 +33,8 @@ func CallAHKFunction(name string) {
 	var uintPtr = uintptr(unsafe.Pointer(utfPtr))
 
 	ahkFunction.Call(uintPtr)
+}
+
+func CloseAHK() {
+	ahkTerminate.Call()
 }

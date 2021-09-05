@@ -50,6 +50,7 @@ func run() error {
 	assistantPressed, capturePressed := false, false
 
 	stadiacontroller.InitAHK()
+	defer stadiacontroller.CloseAHK()
 
 	for {
 		report, err := controller.GetReport()
