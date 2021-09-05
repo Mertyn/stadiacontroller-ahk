@@ -20,17 +20,17 @@ var (
 )
 
 func InitAHK() {
-	var scriptName = "stadiacontroller.ahk"
-	var utfPtr, _ = syscall.UTF16PtrFromString(scriptName)
-	var uintPtr = uintptr(unsafe.Pointer(utfPtr))
+	scriptName := "stadiacontroller.ahk"
+	utfPtr, _ := syscall.UTF16PtrFromString(scriptName)
+	uintPtr := uintptr(unsafe.Pointer(utfPtr))
 
 	ahktextdll.Call()
 	addFile.Call(uintPtr)
 }
 
 func CallAHKFunction(name string) {
-	var utfPtr, _ = syscall.UTF16PtrFromString(name)
-	var uintPtr = uintptr(unsafe.Pointer(utfPtr))
+	utfPtr, _ := syscall.UTF16PtrFromString(name)
+	uintPtr := uintptr(unsafe.Pointer(utfPtr))
 
 	ahkFunction.Call(uintPtr)
 }
