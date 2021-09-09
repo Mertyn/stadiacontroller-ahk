@@ -13,14 +13,10 @@ The Original [stadiacontroller](https://github.com/71/stadiacontroller) program 
 - Emulation via [ViGEm](https://vigem.org) (must be installed), which means that
 everything just works. There won't be pesky Denuvo games that refuse to accept that input.
 
----
-
 ## Installation
 1. Install [ViGEm](https://github.com/ViGEm/ViGEmBus/releases).
 2. Download the [latest release](https://github.com/Mertyn/stadiacontroller-ahk/releases/latest).
 3. Extract the zip into a directory.
-
----
 
 ## Usage
 ### Running the program
@@ -43,8 +39,6 @@ In the default script there are console outputs defined according to the button 
 
 Any arbitrary AutoHotkey v2 code defined in `stadiacontroller.ahk` should be able to run, so there are more possiblities than this simple button to keyboard remap. <br>
 For more information see the [AutoHotkey v2 documentation](https://lexikos.github.io/v2/docs/AutoHotkey.htm). It is important to always reference the documentation for AutoHotkey version 2, as there are pretty big differences from version 1.
-
----
 
 ## Alternatives
 - [Original stadiacontroller](https://github.com/71/stadiacontroller) has all the same functionality, but with Windows command support instead of AutoHotkey.
