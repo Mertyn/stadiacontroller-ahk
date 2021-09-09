@@ -7,7 +7,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/71/stadiacontroller"
+	"github.com/Mertyn/stadiacontroller"
 )
 
 func main() {

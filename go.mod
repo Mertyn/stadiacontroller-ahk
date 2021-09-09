@@ -1,4 +1,4 @@
-module github.com/71/stadiacontroller
+module github.com/Mertyn/stadiacontroller
 
 go 1.14
 
